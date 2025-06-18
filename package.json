@@ -1,0 +1,24 @@
+{
+  "name": "ex-js-unit-testing-snack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matnat99/ex-js-unit-testing-snack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matnat99/ex-js-unit-testing-snack/issues"
+  },
+  "homepage": "https://github.com/matnat99/ex-js-unit-testing-snack#readme",
+  "description": "",
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
+}
