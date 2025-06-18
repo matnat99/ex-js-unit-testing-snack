@@ -80,6 +80,24 @@ describe("Operazioni su array", () => {
     removePost(posts, 3);
     expect(posts).toHaveLength(2);
   });
+
+  //   Snack 9
+  test("Se si tenta di aggiungere un post con un id o uno slug già esistente, la funzione addPost deve lanciare un errore.", () => {
+    expect(() =>
+      addPost(posts, {
+        id: 3,
+        title: "Test post",
+        slug: "test-post",
+      })
+    ).toThrow("Id già esistente");
+    expect(() =>
+      addPost(posts, {
+        id: 4,
+        title: "Cos'è il DOM",
+        slug: "cos-e-il-dom",
+      })
+    ).toThrow("Slug già esistente");
+  });
 });
 
 describe("Generazione di slug", () => {

@@ -40,6 +40,14 @@ function findPostById(posts, id) {
 }
 
 function addPost(posts, post) {
+  const ids = posts.map((post) => post.id);
+  const slugs = posts.map((post) => post.slug);
+  if (ids.includes(post.id)) {
+    throw new Error("Id già esistente");
+  }
+  if (slugs.includes(post.slug)) {
+    throw new Error("Slug già esistente");
+  }
   posts.push(post);
 }
 
