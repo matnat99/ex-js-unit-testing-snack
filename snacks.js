@@ -27,4 +27,22 @@ function isPalindrome(string) {
   return reverseString === string.trim();
 }
 
-module.exports = { getInitials, createSlug, average, isPalindrome };
+function findPostById(posts, id) {
+  if (typeof id !== "number") {
+    throw new Error("Id non valido");
+  }
+  posts.forEach((p) => {
+    if (p.id === undefined || p.title === undefined || p.slug === undefined) {
+      throw new Error("Formato dell'array non corretto");
+    }
+  });
+  return posts.find((post) => post.id === id) || null;
+}
+
+module.exports = {
+  getInitials,
+  createSlug,
+  average,
+  isPalindrome,
+  findPostById,
+};
