@@ -6,7 +6,7 @@ function getInitials(fullName) {
 }
 
 function createSlug(string) {
-  return string.toLowerCase();
+  return string.toLowerCase().replaceAll(" ", "-");
 }
 
 function average(numbers) {
@@ -19,4 +19,9 @@ function average(numbers) {
   return sum / numbers.length;
 }
 
-module.exports = { getInitials, createSlug, average };
+function isPalindrome(string) {
+  const reverseString = string.trim().split("").reverse().join("");
+  return reverseString === string.trim();
+}
+
+module.exports = { getInitials, createSlug, average, isPalindrome };
